@@ -1,0 +1,26 @@
+video_summarizer:
+  scene_threshold: 0.5
+  max_frames: 20
+  method: hybrid
+  device: auto
+
+output:
+  directory: output
+  video_fps: 2
+  image_format: jpg
+
+logging:
+  level: INFO
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+
+deep_learning:
+  model_name: google/vit-base-patch16-224
+  batch_size: 1
+  max_length: 512
+
+# Advanced settings
+advanced:
+  enable_caching: true
+  cache_directory: cache/
+  parallel_processing: false
+  max_workers: 4
